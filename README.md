@@ -127,3 +127,11 @@ And the file structure would look something like this.
 <br >
 
 ABOVE WE USED A BASE OS (ubuntu) ON VAGRANT, BUT VAGRANT COMES WITH SUPPORT FOR USING DOCKER AS A PROVIDER. Which means the development environment is backed by docker instead of the virtual machine (virtualbox in the above case).
+
+---
+
+Finally you can reach the web page of docker at `192.168.33.10` and webpage of docker in `192.168.33.10:8080`
+
+---
+
+So, in next article we can see how to use docker as a provider, and hey also how to use vagrant inside a docker.
