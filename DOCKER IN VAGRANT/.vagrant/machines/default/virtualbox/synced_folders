@@ -1,0 +1,1 @@
+{"virtualbox":{"/data":{"guestpath":"/data","hostpath":"Z:/Programs/Github-repo/Docker-and-Vagrant/DOCKER IN VAGRANT/data","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"Z:/Programs/Github-repo/Docker-and-Vagrant/DOCKER IN VAGRANT","disabled":false,"__vagrantfile":true}}}

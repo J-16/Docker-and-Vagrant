@@ -1,0 +1,25 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+
+   config.vm.network "private_network", ip: "192.168.33.10"
+
+   config.vm.synced_folder "./data", "/data"
+   config.vm.provision "docker"
+   config.vm.provider "virtualbox" do |vb|
+   end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y apache2
+    service apache2 restart
+    sudo cp /data/www/index.html /var/www/html/
+    sudo apt install docker.io y
+
+    cd /data/docker/
+    sudo docker build . -t docker_application
+    sudo docker run -p 8080:8080 docker_application
+    sudo systemctl enable docker
+    
+  SHELL
+  
+end
